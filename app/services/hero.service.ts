@@ -16,14 +16,13 @@ const heroPromise = Promise.resolve(HEROES);
 @Injectable()
 export class HeroService {
 
-  getHeroes() {
+  getHeroes(): Promise<Hero[]> {
     return heroPromise;
   }
 
-  getHero(id: number) {
-    return heroPromise.then((heroes) => {
-      heroes.filter((hero) => hero.id === +id)[0];
-    });
+  getHero(id: number): Promise<Hero> {
+    return heroPromise
+      .then(heroes => heroes.filter(hero => hero.id === +id)[0]);
   }
 
 }

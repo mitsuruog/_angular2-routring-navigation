@@ -1,1 +1,8 @@
-<div>hero-list</div>
+<div>Heroes</div>
+<ul>
+  <li *ngFor="#hero of heroes"
+    [class.selected]="isSelected(hero)"
+    (click)="handleSelect(hero)">
+    <span>{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
