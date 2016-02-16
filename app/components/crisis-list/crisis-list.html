@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="#crisis of crises"
+    [class.selected]="isSelected(crisis)"
+    (click)="handleSelect(crisis)">
+    <span>{{crisis.id}}</span> {{crisis.name}}
+  </li>
+</ul>

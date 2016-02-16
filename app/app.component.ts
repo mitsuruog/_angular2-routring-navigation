@@ -1,7 +1,7 @@
 import {Component, OnInit} from 'angular2/core';
 import {RouteConfig, RouterOutlet} from 'angular2/router';
 
-import {CrisisCenterComponent} from './components/crisis-center/crisis-center.component';
+import {CrisisContainerComponent} from './components/crisis-container/crisis-container.component';
 import {HeroDetailComponent} from './components/hero-detail/hero-detail.component';
 import {HeroListComponent} from './components/hero-list/hero-list.component';
 
@@ -19,9 +19,9 @@ import {Logger} from './common/services/logger.service';
 
 @RouteConfig([
   {
-    path: '/crisis-center',
+    path: '/crisis-center/...',
     name: 'CrisisCenter',
-    component: CrisisCenterComponent,
+    component: CrisisContainerComponent,
     useAsDefault: true
   },
   {
